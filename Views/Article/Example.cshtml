@@ -1,0 +1,14 @@
+﻿@page
+@model WebApplication1.Models.Article
+@{
+    ViewData["Title"] = "Article in Action2";
+}
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+
+
+<h2>@Model.Title</h2>
+<h4>Posted by: @Model.Author at @Model.DateCreated</h4>
+<p>@Model.Body</p>
+
