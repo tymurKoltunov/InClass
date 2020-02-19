@@ -26,9 +26,15 @@
         <button type="submit">Create new article</button>
     }
 </fieldset>
-@if()
-<h2>Article to be submitted...</h2>
+<hr />
+@if (Model != null)
+{
+    
+    <h1>Article to be submitted...</h1>
 
-<h2>@Model.Title</h2>
-<h4>Posted by: @Model.Author at @Model.DateCreated</h4>
-<p>@Model.Body</p>
+    <h2>@Model.Title</h2>
+
+    <h4>Posted by: @Model.Author at @Model.DateCreated</h4>
+
+    <p>@Model.Body</p>
+}
