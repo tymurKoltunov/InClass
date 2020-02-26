@@ -8,6 +8,7 @@ using DataModels;
 using Library.BusinessLogic;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
@@ -49,6 +50,7 @@ namespace WebApplication1.Controllers
             };
             return View();
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Create()
         {
@@ -68,6 +70,7 @@ namespace WebApplication1.Controllers
 
             
         }
+        [Authorize]
         public IActionResult Listing()
         {
             ArticleHandler ah = new ArticleHandler(_configuration);
